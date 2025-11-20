@@ -147,6 +147,20 @@ template_name = "omni.usd_composer"
 "omni.videoencoding" = {}
 "base.usd_composer_setup_extension" = { order = 1000 } # we are running that at the end
 
+# Physics simulation for customer flow and product interactions
+"omni.physx" = {}
+"omni.physx.ui" = {}
+"omni.physx.fabric" = {}
+
+# XR and Spatial Streaming for Apple Vision Pro
+"omni.kit.xr.core" = {}
+"omni.kit.xr.system.openxr" = {}
+"omni.kit.streamer.webrtc" = {}
+
+# Additional viewport and camera controls
+"omni.kit.viewport.navigation.camera_manipulator" = {}
+"omni.kit.viewport.navigation.walk" = {}
+
 
 [dependencies."filter:platform"."windows-x86_64"]
 "omni.kit.window.modifier.titlebar" = {version = "=107.0.1"}  # Use exact version to avoid supported target platform check
@@ -239,6 +253,14 @@ experience = "USD Composer"
 "omni.ui".raster.default_rasterpolicy_enabled = true
 "omni.usd".enableUsdMaterialWatcherForFsd = true
 "omni.warp".enable_menu = false
+
+# Physics configuration
+"omni.physx".autoEnableSceneQuerySupport = true
+"omni.physx.ui".displayJoints = false
+
+# XR streaming settings for Vision Pro
+"omni.kit.xr.core".enabled = true
+"omni.kit.streamer.webrtc".enabled = true
 
 [settings.exts."omni.anim.window.timeline"]
 show = false
